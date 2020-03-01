@@ -1,0 +1,17 @@
+﻿body
+{
+    background-image:url("../images/indexBackground.jpg");
+    background-repeat:no-repeat;
+    background-size:cover;
+
+}
+form {
+    width: 30%;
+    margin: auto;
+    color:wheat;
+}
+
+legend
+{
+    color:gold;
+}

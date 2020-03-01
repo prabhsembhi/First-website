@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>My personal web page</title>
+    <link rel="stylesheet" href="css/indexstyle.css" />
+</head>
+<body>
+
+
+
+
+
+    <form>
+
+        <fieldset>
+
+
+            <h3>Name</h3>
+            <input type="text" name="name">
+
+
+
+            <h3>Birthday</h3>
+            <input type="date" name="birthday">
+
+
+            <h3>Select your Mobile</h3>
+            <select id="mvalue">
+                <optgroup label="Samsung">Samsung Models</optgroup>
+                <option value="900">Model S9 ($900)</option>
+                <option value="820">Model S8 ($820)</option>
+                <option value="680">Model S7 ($680)</option>
+                <optgroup label="Oneplus">Oneplus Models</optgroup>
+                <option value="630">Oneplus6 ($630)</option>
+                <option value="520">Oneplus5 ($520)</option>
+                <option value="400">Oneplus4 ($400)</option>
+                <optgroup label="Apple">Apple Models</optgroup>
+                <option value="1200">Iphone X ($1200)</option>
+                <option value="930">Iphone 8 ($930)</option>
+                <option value="700">Iphone 7 ($700)</option>
+            </select>
+
+
+
+            <h3>Downpayment</h3>
+            <input type="number" name="downpayment" id="dpayment" />
+
+
+
+
+            <h3>Financial period</h3>
+            <select id="fperiod">
+                <option value="3">3 Months</option>
+                <option value="6">6 Months</option>
+                <option value="9">9 Months</option>
+                <option value="12">12 Months</option>
+                <option value="15">15 Months</option>
+                <option value="18">18 Months</option>
+                <option value="21">21 Months</option>
+                <option value="24">24 Months</option>
+            </select>
+
+            <br /><br />
+
+            <button type="button" onclick="toPay()">Calculate</button>
+
+        </fieldset>
+
+    </form>
+</body>
+
+<script>
+
+    function toPay() {
+        var mobileValue = document.getElementById("mvalue").value;
+        var downpayment = document.getElementById("dpayment").value;
+        var fperiod = document.getElementById("fperiod").value;
+    
+        var pay = ((mobileValue - downpayment) / fperiod);
+
+        window.alert(pay);
+    }
+</script>
+</html>
